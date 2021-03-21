@@ -18,7 +18,6 @@ describe('Auth', () => {
         LoginPage.setPassword('nhiciwi5818');
         LoginPage.clickSummitButton();
         ProfilePage.isOpen();
-
     });
 
     it('submit button is disabled if login and password are absent', () => {
@@ -32,7 +31,6 @@ describe('Auth', () => {
         LoginPage.clickSummitButton();
         LoginPage.errorToastAppeared();
     });
-
 
 });
 

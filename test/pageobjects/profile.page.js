@@ -6,7 +6,6 @@ class ProfilePage extends Page {
     isOpen(){
         expect(browser).toHaveUrlContaining('/profile/');
         expect(this.iconUser).toBeDisplayed();
-
     }
 }
 

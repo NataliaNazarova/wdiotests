@@ -29,7 +29,6 @@ class LoginPage extends Page {
     errorToastAppeared() {
         expect(this.errorToast).toBeDisplayed();
     }
-
 }
 
 export default new LoginPage();
