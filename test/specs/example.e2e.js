@@ -32,6 +32,13 @@ describe('Auth', () => {
         LoginPage.errorToastAppeared();
     });
 
+    it('login input is required', () => {
+        LoginPage.setLogin('example');
+        LoginPage.emptyLoginInput();
+        browser.pause(3000);
+        LoginPage.loginRequiredError();
+    });
+
 });
 
 
