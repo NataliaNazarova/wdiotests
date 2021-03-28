@@ -19,7 +19,7 @@ class LoginPage extends Page {
         this.inputPassword.setValue(password);
     }
 
-    clickSummitButton (){
+    clickSubmitButton (){
         this.buttonSubmit.click();
     }
 

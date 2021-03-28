@@ -1,4 +1,4 @@
-import Page from "./page";
+import Page from "./portal.page";
 
 class ProfilePage extends Page {
     get iconUser (){return $('.ant-avatar-square');}

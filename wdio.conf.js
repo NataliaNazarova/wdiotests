@@ -1,3 +1,6 @@
+import LoginPage from './test/pageobjects/login.page';
+import ProfilePage from './test/pageobjects/portal/profile.portal.page';
+
 exports.config = {
     //
     // ====================
@@ -17,7 +20,8 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/specs/**/*.js'
+        // './test/specs/**/*.js'
+        './test/specs/navigation.spec.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -183,8 +187,15 @@ exports.config = {
      * @param {Array.<String>} specs        List of spec file paths that are to be run
      * @param {Object}         browser      instance of created browser/device session
      */
-    // before: function (capabilities, specs) {
-    // },
+    before: function (capabilities, specs) {
+        browser.addCommand('login', function (username, password) {
+            LoginPage.open();
+            LoginPage.setLogin(username);
+            LoginPage.setPassword(password);
+            LoginPage.clickSubmitButton();
+            ProfilePage.isOpen();
+        })
+     },
     /**
      * Runs before a WebdriverIO command gets executed.
      * @param {String} commandName hook command name
