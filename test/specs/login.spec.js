@@ -16,7 +16,7 @@ describe('Auth', () => {
         LoginPage.open();
         LoginPage.setLogin('nhiciwi5818@ichkoch.com');
         LoginPage.setPassword('nhiciwi5818');
-        LoginPage.clickSummitButton();
+        LoginPage.clickSubmitButton();
         ProfilePage.isOpen();
     });
 
@@ -28,7 +28,7 @@ describe('Auth', () => {
     it("fails if invalid data provided", () => {
         LoginPage.setLogin('example@example.com');
         LoginPage.setPassword('123456');
-        LoginPage.clickSummitButton();
+        LoginPage.clickSubmitButton();
         LoginPage.errorToastAppeared();
     });
 
